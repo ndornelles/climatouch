@@ -27,6 +27,13 @@ secrets.yml
 *.local.yaml
 
 ############################################
+# Privado — NÃO subir (fica só no clone local / iCloud)
+# Compras (fornecedor/qtd/valor), ferramentas e mapa dos
+# aparelhos que vamos controlar. Detalhes de negócio fora do GitHub.
+############################################
+private/
+
+############################################
 # VSCode
 ############################################
 .vscode/

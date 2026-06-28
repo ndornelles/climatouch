@@ -10,7 +10,8 @@ Fases do `climatouch`, do hardware até os painéis de parede.
 ## Fase 1 — Protótipo (1 ponto)
 
 - Montar **1 dispositivo** e validar a cadeia completa: tela + toque + WiFi + sensor + IR.
-- Aparelho sugerido para começar: um **GREE** (protocolo `gree` nativo do ESPHome, confiável).
+- Começar por um aparelho cujo protocolo já seja **nativo e confiável** no ESPHome — acelera a
+  validação (o mapeamento específico fica nos arquivos locais, fora do repositório).
 - Imprimir o case na variante **sob a mesa** ou **mesa (ângulo ajustável)** já existente.
 - Critério de pronto: ligar/desligar e ajustar temperatura do AC pelo HA, 100% local, e ler
   temperatura/umidade/pressão na tela.

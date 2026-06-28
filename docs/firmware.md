@@ -19,18 +19,20 @@ O ESPHome tem **protocolos de clima embutidos** — você manda "cool 24°C" e e
 certos. Quando o aparelho tem protocolo pronto, é só usar. Quando não tem, a gente **captura**
 os códigos com o receptor IR (VS1838B) e reproduz com `remote_transmitter`.
 
-### Matriz de aparelhos → caminho
+### Estratégia por cenário
 
-| Aparelho | Caminho | Protocolo / integração | Situação |
-|---|---|---|---|
-| GREE (linha antiga, sem WiFi) | IR (CYD) | `climate_ir` **`gree`** (nativo ESPHome) | protocolo confiável — **candidato a protótipo** |
-| Eletrolux (split, sem WiFi) | IR (CYD) | external component da comunidade **ou** captura IR | a validar |
-| Springer (linha antiga, sem WiFi) | IR (CYD) | tentar nativo (`coolix`/`tcl112`/etc.) **ou** captura | a validar por modelo |
-| Midea/Springer com WiFi | WiFi local | integração local no HA (`midea_ac_lan`) | **sem ESP32** |
-| Marcas com WiFi nativo (ex.: LG/Daikin) | WiFi/cloud do fabricante | integração própria no HA | **sem ESP32** |
+O caminho depende de o aparelho ter WiFi e de existir protocolo nativo no ESPHome. **As
+marcas/modelos específicos não ficam aqui** — esse mapeamento é mantido nos arquivos locais,
+fora deste repositório.
 
-> Os controles físicos de todos os aparelhos estão disponíveis, então a **captura é sempre um
-> fallback garantido** caso o protocolo nativo não bata.
+| Cenário | Caminho | Como |
+|---|---|---|
+| Sem WiFi, **com** protocolo nativo no ESPHome | IR (CYD) | usar o `climate_ir` correspondente (a biblioteca traz `gree`, `coolix`, `daikin`, `tcl112`, `midea_ir`, `fujitsu_general`, entre outros) |
+| Sem WiFi, **sem** protocolo nativo | IR (CYD) | **capturar** os códigos com o receptor IR e reproduzir com `remote_transmitter` |
+| **Com** WiFi | WiFi local | integração local no Home Assistant (ex.: `midea_ac_lan`) ou a integração do fabricante — **sem ESP32** |
+
+> Como os controles físicos estão disponíveis, a **captura é sempre um fallback garantido** caso
+> o protocolo nativo não exista ou não bata.
 
 ### Esqueleto da entidade climate (IR nativo)
 

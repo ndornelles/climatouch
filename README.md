@@ -26,8 +26,8 @@ O `climatouch` parte dessa base e acrescenta o que o projeto original não cobre
 
 ## Por que existe
 
-Os ar-condicionados eram controlados por um hub IR na **nuvem Tuya**, que estourou a cota de
-trial repetidas vezes e deixava os aparelhos sem resposta. O `climatouch` move esse controle
+Os ar-condicionados eram controlados por um hub IR **dependente de nuvem**, que estourou a cota
+de trial repetidas vezes e deixava os aparelhos sem resposta. O `climatouch` move esse controle
 para **dentro de casa**: o ESP32 fala IR direto com o aparelho e WiFi local com o Home
 Assistant — **sem nuvem, sem cota, sem trial**. Cada ponto vira também um painel de toque
 para controlar luzes e cenas sem pegar o celular.
@@ -36,8 +36,8 @@ para controlar luzes e cenas sem pegar o celular.
 
 1. Um **Cheap Yellow Display (ESP32-2432S028R)** roda ESPHome com uma entidade `climate`.
 2. Um **LED infravermelho** ligado a um GPIO emite os comandos para o ar-condicionado, usando
-   os **protocolos de clima nativos do ESPHome** (ex.: `gree`) ou códigos **capturados** com um
-   receptor IR quando não há protocolo pronto.
+   os **protocolos de clima nativos do ESPHome** (ex.: `gree`, `coolix`, `daikin`…) ou códigos
+   **capturados** com um receptor IR quando não há protocolo pronto.
 3. Um **sensor AHT20+BMP280** mede temperatura, umidade e pressão do cômodo.
 4. A tela exibe e ajusta o estado do AC e serve de **painel de controle do Home Assistant**.
 

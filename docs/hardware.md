@@ -16,8 +16,8 @@
 | Ligações | **jumpers dupont** (fêmea-fêmea e macho-fêmea) | conexão sem solda nos headers do CYD |
 | Alimentação | **fonte USB 5 V** | adquirida no Brasil; ver "Alimentação" abaixo |
 
-> Os WiFi-nativos (alguns ACs e o módulo Midea/Springer com WiFi) **não usam** este hardware —
-> são controlados por integração local direta no Home Assistant. Ver
+> Os aparelhos que já têm **WiFi próprio** não usam este hardware — são controlados por
+> integração local direta no Home Assistant. Ver
 > [firmware.md](firmware.md).
 
 ## Pinagem do CYD (ESP32-2432S028R)
