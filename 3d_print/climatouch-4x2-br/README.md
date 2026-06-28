@@ -9,11 +9,19 @@ especificação completa, requisitos e abordagem de modelagem estão em
 ```
 3d_print/climatouch-4x2-br/
 ├── README.md                 (este arquivo)
+├── ir-mod.scad               (OpenSCAD: importa o corpo herdado e fura janelas de IR) ✅
 ├── frontal-4x2.f3d           (fonte Fusion 360 — a criar)
 ├── frontal-4x2.stl           (impressão — a criar)
 ├── berco-placa.stl           (berço do CYD com recorte de tela e janela IR — a criar)
 └── ASSEMBLY.md               (guia de montagem — a criar)
 ```
+
+## `ir-mod.scad` — furos de IR no corpo herdado
+
+Script OpenSCAD que **importa o `outer-body.stl` original e subtrai** os furos do emissor e do
+receptor IR (+ ventilação do sensor). Abrir no OpenSCAD, ajustar os parâmetros (medir o CYD),
+`Render` (F6) e `Export as STL`. Planejamento e parâmetros em
+[../../docs/case-ir-mod.md](../../docs/case-ir-mod.md).
 
 ## Reaproveitamento
 

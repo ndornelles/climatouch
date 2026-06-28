@@ -48,6 +48,7 @@ para controlar luzes e cenas sem pegar o celular.
 | [docs/hardware.md](docs/hardware.md) | Componentes (genérico), pinagem do CYD e ligações de IR e sensor |
 | [docs/firmware.md](docs/firmware.md) | Estratégia ESPHome, matriz de protocolos IR por aparelho e funcionalidades grátis |
 | [docs/case-4x2-br.md](docs/case-4x2-br.md) | Especificação do case para espelho 4x2 BR + variantes herdadas |
+| [docs/case-ir-mod.md](docs/case-ir-mod.md) | Como adaptar o case para o IR (furos emissor/receptor) — via OpenSCAD reproduzível |
 | [docs/roadmap.md](docs/roadmap.md) | Fases do projeto (compras → protótipo → réplica → parede) |
 | [docs/UPSTREAM.md](docs/UPSTREAM.md) | README original do projeto-base (preservado) |
 
